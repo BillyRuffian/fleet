@@ -1,0 +1,7 @@
+
+= cache @blog do
+
+  %h1 Blogs#show
+  %p Find me in app/views/blogs/show.html.haml
+
+  = render partial: 'post', collection: @posts, cached: true

@@ -1,0 +1,5 @@
+%article
+  = cache @post do 
+    %h1= @post.title 
+
+    != Asciidoctor.convert @post.body, safe: true
