@@ -1,6 +1,5 @@
 class BlogsController < ApplicationController
   include Pagy::Backend
-  layout 'landing'
 
   def show
     @blog = Blog.first

@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
-  layout 'landing'
-  
+
   def show
     slug = params[:slug]
     @blog = Blog.first

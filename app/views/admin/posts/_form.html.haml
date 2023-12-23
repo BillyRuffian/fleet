@@ -1,0 +1,8 @@
+-# locals: (post:)
+
+= form_with model: [:admin, post] do |f|
+  = f.label :title
+  = f.text_field :title 
+  = f.label :body 
+  = f.text_area :body, size: '70x15'
+  = f.submit 'Save'

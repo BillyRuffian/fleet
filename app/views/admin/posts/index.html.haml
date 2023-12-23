@@ -1,0 +1,17 @@
+%h1 Posts
+
+%ul
+  %li= link_to 'Create a new post', new_admin_post_path
+
+%section
+  %table
+    %thead
+      %tr 
+        %td Title 
+        %td Published
+    %tbody 
+      - @posts.each do |post| 
+        %tr 
+          %td= link_to post.title, admin_post_path(post)
+          %td
+            %time= post.published_at.to_formatted_s(:long) 

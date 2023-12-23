@@ -1,0 +1,16 @@
+%h1 Post 
+
+%section 
+  %h2= @post.title
+  %p= link_to 'Edit post', edit_admin_post_path(@post)
+  %p
+    Created:
+    %time= @post.created_at.to_formatted_s(:long)
+    - if @post.updated_since_creation?
+      Modified:
+      %time= @post.updated_at.to_formatted_s(:long)
+    Published:
+    %time=@post.published_at.to_formatted_s(:long)
+
+%section
+  = @post.adoc

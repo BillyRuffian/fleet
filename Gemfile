@@ -76,3 +76,7 @@ gem "pagy", "~> 6.2"
 
 
 gem "asciidoctor", "~> 2.0"
+
+gem "clearance", "~> 2.6"
+
+gem "rouge", "~> 4.2"
