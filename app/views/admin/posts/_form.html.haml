@@ -1,6 +1,15 @@
 -# locals: (post:)
 
 = form_with model: [:admin, post] do |f|
+  - if post.errors.any?
+    %div{style: "color: red"}
+      %h2
+        = pluralize(post.errors.count, "error")
+        prohibited this thing from being saved:
+      %ul
+        - post.errors.each do |error|
+          %li= error.full_message
+
   = f.label :title
   = f.text_field :title 
   = f.label :body 

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get '/posts/:slug', to: 'posts#show'
+  get '/posts/:slug', to: 'posts#show', as: 'posts'
 
   namespace :admin do
     resources :posts

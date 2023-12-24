@@ -74,9 +74,6 @@ gem "erb2haml", "~> 0.1.5"
 
 gem "pagy", "~> 6.2"
 
-
-gem "asciidoctor", "~> 2.0"
-
 gem "clearance", "~> 2.6"
-
-gem "rouge", "~> 4.2"
+gem "coderay", "~> 1.1"
+gem "redcarpet", "~> 3.6"

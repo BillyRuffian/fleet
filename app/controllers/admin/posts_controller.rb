@@ -1,9 +1,19 @@
 class Admin::PostsController < ApplicationController
   before_action :require_login
-  before_action :find_post, except: [:new, :index]
+  before_action :find_post, except: [:new, :index, :create]
 
   def new
     @post = Post.new
+  end
+
+  def create
+    @post = Post.new(post_params)
+
+    if @post.save
+      redirect_to admin_post_url(@post)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def edit
@@ -14,6 +24,8 @@ class Admin::PostsController < ApplicationController
     
     if @post.update(post_params)
       redirect_to admin_post_url(@post)
+    else
+      render :edit, status: :unprocessable_entity
     end
         
   end
