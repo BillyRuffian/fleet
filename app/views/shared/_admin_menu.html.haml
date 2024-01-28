@@ -1,0 +1,32 @@
+
+#nav.pure-u
+  %a#menuLink.nav-menu-button{href: "#"} Menu
+  .nav-inner
+    = link_to 'Compose', new_administration_post_path, class: 'primary-button pure-button'
+    .pure-menu
+      %ul.pure-menu-list
+        %li.pure-menu-item
+          %a.pure-menu-link{href: "#"}
+            Inbox
+            %span.post-count (2)
+        %li.pure-menu-item
+          %a.pure-menu-link{href: "#"} Important
+        %li.pure-menu-item
+          %a.pure-menu-link{href: "#"} Sent
+        %li.pure-menu-item
+          %a.pure-menu-link{href: "#"} Drafts
+        %li.pure-menu-item
+          %a.pure-menu-link{href: "#"} Trash
+        %li.pure-menu-heading Labels
+        %li.pure-menu-item
+          %a.pure-menu-link{href: "#"}
+            %span.post-label-personal>
+            Personal
+        %li.pure-menu-item
+          %a.pure-menu-link{href: "#"}
+            %span.post-label-work>
+            Work
+        %li.pure-menu-item
+          %a.pure-menu-link{href: "#"}
+            %span.post-label-travel>
+            Travel

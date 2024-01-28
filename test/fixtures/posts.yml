@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: posts
+#
+#  id           :integer          not null, primary key
+#  title        :string
+#  published_at :datetime
+#  draft        :boolean          default(TRUE)
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+
+one:
+  title: MyString
+  published_at: 2024-01-28 11:37:10
+  draft: false
+
+two:
+  title: MyString
+  published_at: 2024-01-28 11:37:10
+  draft: false
